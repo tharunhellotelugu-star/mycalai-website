@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How Accurate Are AI Calorie Counters? — MyCal AI</title>
+<meta name="description" content="An honest look at AI calorie counter accuracy — where photo-based nutrition scanning genuinely struggles, why, and what actually improves the estimates.">
+<link rel="canonical" href="https://mycalai.co/how-accurate-are-ai-calorie-counters.html">
+<meta name="robots" content="index, follow">
+
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="MyCal AI">
+<meta property="og:title" content="How Accurate Are AI Calorie Counters? — MyCal AI">
+<meta property="og:description" content="An honest look at AI calorie counter accuracy — where photo-based nutrition scanning genuinely struggles, and what actually helps.">
+<meta property="og:url" content="https://mycalai.co/how-accurate-are-ai-calorie-counters.html">
+<meta property="og:image" content="https://mycalai.co/og-image.png">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="How Accurate Are AI Calorie Counters? — MyCal AI">
+<meta name="twitter:description" content="An honest look at AI calorie counter accuracy — where photo-based nutrition scanning genuinely struggles, and what actually helps.">
+<meta name="twitter:image" content="https://mycalai.co/og-image.png">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "MyCal AI", "item": "https://mycalai.co/" },
+    { "@type": "ListItem", "position": 2, "name": "How Accurate Are AI Calorie Counters?", "item": "https://mycalai.co/how-accurate-are-ai-calorie-counters.html" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "Are calorie counting apps accurate enough to be useful?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, for tracking trends over time — which is what actually drives most nutrition and weight-management outcomes — even though single-meal precision varies. Consistency matters more than any one estimate being exact." } },
+    { "@type": "Question", "name": "Why do calorie counters underestimate fried or oily food?", "acceptedAnswer": { "@type": "Answer", "text": "Because added oil, ghee, or butter is often mixed into a dish rather than sitting visibly on the surface, so a photo alone doesn't fully capture it. Good apps compensate by reasoning about typical preparation, not just what's visible." } },
+    { "@type": "Question", "name": "Is voice logging more accurate than photo logging for calories?", "acceptedAnswer": { "@type": "Answer", "text": "It can be more accurate for portion size, since it isn't affected by camera angle or depth perception — but it can miss visual cues about oiliness or preparation that a photo sometimes catches." } }
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700;9..144,900&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --paper:#FEF7FF;--surface:#FFFFFF;--ink:#1D1B20;--ink-soft:#625B71;
+    --violet:#6750A4;--violet-deep:#21005D;--violet-container:#EADDFF;
+    --amber:#D97706;--rose:#E11D48;--line:#E3DAF0;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{background:var(--paper);color:var(--ink);font-family:'Inter',sans-serif;-webkit-font-smoothing:antialiased;}
+  .wrap{max-width:820px;margin:0 auto;padding:0 24px;}
+  nav.wrap{display:flex;align-items:center;justify-content:space-between;padding:22px 24px;border-bottom:1px solid var(--line);max-width:960px;}
+  nav .brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);}
+  nav .brand span{font-family:'Fraunces',serif;font-weight:700;font-size:19px;letter-spacing:-0.01em;}
+  nav a.back{font-family:'IBM Plex Mono',monospace;font-size:12.5px;color:var(--violet);text-decoration:none;}
+  main{padding:52px 0 30px;}
+  .kicker{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--violet);text-transform:uppercase;letter-spacing:.06em;margin-bottom:14px;}
+  h1{font-family:'Fraunces',serif;font-weight:700;font-size:clamp(30px,4.4vw,44px);letter-spacing:-0.01em;margin-bottom:16px;line-height:1.12;}
+  .lede{font-size:18px;line-height:1.65;color:var(--ink-soft);max-width:640px;margin-bottom:28px;}
+  h2{font-family:'Fraunces',serif;font-weight:600;font-size:24px;margin-top:44px;margin-bottom:14px;color:var(--violet-deep);}
+  p,li{font-size:15.5px;line-height:1.7;color:var(--ink-soft);}
+  p{margin-bottom:14px;}
+  ul{padding-left:20px;margin-bottom:14px;}
+  li{margin-bottom:6px;}
+  strong{color:var(--ink);}
+  a{color:var(--violet);}
+  .btn-primary{display:inline-flex;align-items:center;gap:10px;padding:15px 28px;border-radius:100px;background:var(--violet);color:#fff;font-weight:600;font-size:15px;text-decoration:none;margin:8px 0 6px;}
+  .btn-primary:hover{opacity:.92;}
+  .cta-note{display:block;font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--ink-soft);margin-bottom:8px;}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:18px 0;}
+  @media (max-width:640px){.grid2{grid-template-columns:1fr;}}
+  .card{border:1px solid var(--line);border-radius:14px;padding:18px 20px;background:var(--surface);}
+  .card h4{font-family:'Inter',sans-serif;font-weight:700;font-size:15px;margin-bottom:6px;color:var(--ink);}
+  .card p{margin-bottom:0;font-size:14px;}
+  table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14.5px;}
+  th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line);}
+  th{font-family:'IBM Plex Mono',monospace;font-size:11.5px;text-transform:uppercase;color:var(--ink-soft);letter-spacing:.04em;}
+  td strong{color:var(--violet-deep);}
+  .faq-list{display:flex;flex-direction:column;gap:10px;margin:18px 0;}
+  .faq-item{border:1px solid var(--line);border-radius:14px;padding:16px 20px;background:var(--surface);}
+  .faq-item summary{cursor:pointer;font-weight:600;font-size:15px;list-style:none;}
+  .faq-item summary::-webkit-details-marker{display:none;}
+  .faq-item summary::after{content:"+";float:right;font-weight:400;color:var(--ink-soft);}
+  .faq-item[open] summary::after{content:"\2212";}
+  .faq-item p{margin-top:10px;margin-bottom:0;}
+  .cta-band{background:var(--violet-container);border-radius:20px;padding:32px;margin:40px 0;text-align:center;}
+  .cta-band h3{font-family:'Fraunces',serif;font-weight:600;font-size:21px;margin-bottom:14px;color:var(--violet-deep);}
+  footer.wrap{max-width:960px;border-top:1px solid var(--line);padding:26px 24px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;}
+  footer a{font-family:'IBM Plex Mono',monospace;font-size:12.5px;text-decoration:none;color:var(--ink-soft);}
+  footer .foot-links{display:flex;gap:18px;align-items:center;}
+</style>
+</head>
+<body>
+<nav class="wrap">
+  <a class="brand" href="/"><span>MyCal AI</span></a>
+  <a class="back" href="/">&larr; Back to home</a>
+</nav>
+<main class="wrap">
+
+<div class="kicker">AI Accuracy</div>
+<h1>How accurate are AI calorie counters?</h1>
+<p class="lede">Most AI-powered calorie counters land within <strong>roughly 15–25% of a lab-measured value</strong> for a single meal under good conditions — closer for simple, clearly-visible foods, further off for mixed dishes with hidden ingredients like oil, butter, or dense sauces. That's a meaningfully better starting point than most people's own visual estimate, but it's not lab-grade precision, and it's worth understanding exactly where the error tends to come from.</p>
+
+<div class="cta-band">
+    <h3>See a confidence score on every scan.</h3>
+    <a class="btn-primary" href="https://play.google.com/apps/testing/com.mycalai.app" target="_blank" rel="noopener">
+      Try the beta on Android
+      <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+    </a>
+    <span class="cta-note">Free tier available &middot; Android only, closed testing</span>
+</div>
+
+<h2>Where the error actually comes from</h2>
+<p>Every photo-based food scanner — not just one particular app — runs into the same handful of structural limits:</p>
+
+<div class="grid2">
+  <div class="card"><h4>1. Hidden added fat</h4><p>Oil, ghee, and butter are often stirred into a dish rather than sitting visibly on top. A curry, stir-fry, or sautéed vegetables can carry 100+ hidden calories.</p></div>
+  <div class="card"><h4>2. Food density variation</h4><p>A cup of rice weighs far more than the same volume of leafy salad or a puffed snack — density has to be judged per food, not assumed.</p></div>
+  <div class="card"><h4>3. Portion from a 2D photo</h4><p>Depth is genuinely hard to judge from a single image — a thick layer of rice looks similar to a thin one from directly above.</p></div>
+  <div class="card"><h4>4. Ambiguous dishes</h4><p>Regional or home-style dishes that don't match a "standard" plate are harder to identify confidently, which cascades into less accurate estimates.</p></div>
+</div>
+
+<h2>Photo mode vs. voice/text logging</h2>
+<p>Interestingly, describing a meal in words ("two rotis and a bowl of dal") can sometimes be <em>more</em> accurate than a photo for portion size, because it removes the depth-perception problem entirely — the app estimates from a known typical serving size rather than guessing from pixels. The trade-off is that text logging can't visually catch things like an unusually oily preparation the way a photo sometimes can. Good AI food-logging tools should handle these two input types differently rather than applying identical assumptions to both.</p>
+
+<h2>What actually improves accuracy</h2>
+<ul>
+  <li><strong>Explicit fat-preparation reasoning</strong>, not just ingredient recognition. An app that assumes "dry" preparation by default will systematically underestimate calories for anything fried, sautéed, or simmered in a rich sauce.</li>
+  <li><strong>Density-aware portion estimation</strong> — treating a plate of rice differently from a plate of salad greens when converting visual size to grams.</li>
+  <li><strong>User correction.</strong> Every serious food-logging app should let you edit the AI's estimate after the fact — portion size, individual items, calories.</li>
+  <li><strong>A confidence signal.</strong> A trustworthy tool should tell you when it's <em>not</em> confident about an identification, rather than presenting a guess with false certainty.</li>
+</ul>
+
+<h2>So — should you trust an AI calorie counter?</h2>
+<p>For the actual use case most people have — tracking trends over weeks, not hitting an exact daily number — yes, with realistic expectations. The value of calorie tracking mostly comes from consistency and awareness over time, not any single meal's number being perfectly precise. A tool that's honestly within 15-20% most of the time, lets you correct it when it's off, and is transparent about hidden-fat and portion-density limitations is a legitimately useful tool for that purpose — which is a different bar than claiming lab-grade accuracy.</p>
+<p>MyCal AI is built around this honestly: it reasons explicitly about hidden added fat and food density rather than only counting what's clearly visible, shows a confidence score on every scan so you know when to double-check, and lets you edit any item's portion or add something the scan missed — because the goal is a fast, useful estimate you can trust and correct, not a black box.</p>
+
+<h2>Frequently asked questions</h2>
+<div class="faq-list">
+  <details class="faq-item"><summary>Are calorie counting apps accurate enough to be useful?</summary><p>Yes, for tracking trends over time — which is what actually drives most nutrition and weight-management outcomes — even though single-meal precision varies. Consistency matters more than any one estimate being exact.</p></details>
+  <details class="faq-item"><summary>Why do calorie counters underestimate fried or oily food?</summary><p>Because added oil, ghee, or butter is often mixed into a dish rather than sitting visibly on the surface, so a photo alone doesn't fully capture it. Good apps compensate by reasoning about typical preparation, not just what's visible.</p></details>
+  <details class="faq-item"><summary>Is voice logging more accurate than photo logging for calories?</summary><p>It can be more accurate for portion size, since it isn't affected by camera angle or depth perception — but it can miss visual cues about oiliness or preparation that a photo sometimes catches.</p></details>
+</div>
+
+<div class="cta-band">
+    <h3>Curious how it holds up in practice?</h3>
+    <a class="btn-primary" href="https://play.google.com/apps/testing/com.mycalai.app" target="_blank" rel="noopener">
+      Try the beta on Android
+      <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+    </a>
+    <span class="cta-note">Try it on your next meal</span>
+</div>
+
+</main>
+<footer class="wrap">
+  <span>MyCal AI</span>
+  <div class="foot-links">
+    <a href="/privacy.html">Privacy</a>
+    <a href="/terms.html">Terms</a>
+    <a href="mailto:support@mycalai.co">support@mycalai.co</a>
+  </div>
+</footer>
+</body>
+</html>
