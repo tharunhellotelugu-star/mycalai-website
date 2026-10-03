@@ -1,0 +1,41 @@
+# MyCal AI
+
+> MyCal AI is an Android calorie and nutrition tracker that logs a meal from one photo. It identifies every item on the plate separately (multi-item detection), estimates each portion, and gives calories, protein, carbs, fat, fiber and sodium per item. It is tuned for Indian and regional dishes as well as global cuisine.
+
+Key facts:
+
+- Platform: Android (Google Play, package `com.mycalai.app`). No iOS version yet.
+- Free plan: 2 AI photo scans a day, plus up to 3 bonus scans a day by watching a short ad.
+- Premium: at least 15 AI photo scans a day, the AI Nutrition Coach (12 messages a day), and no ads. Weekly US$6.99, monthly US$16.99, yearly US$49.99 with a 3-day free trial. Google Play shows local prices in other countries.
+- AI Nutrition Coach: answers questions using the user's own logged meals, not generic advice.
+- AI Menu Scanner: photograph a restaurant menu and get dishes ranked for the user's goal and reported health conditions.
+- Also: voice meal logging, water tracking, meal prep batches, progress photos, weight trends, Health Connect steps, group challenges, and a PDF health report export.
+- MyCal AI gives nutrition estimates, not medical advice.
+- Developer contact: support@mycalai.co
+
+## Product pages
+
+- [AI food scanner app](https://mycalai.co/ai-food-scanner-app.html): how multi-item plate detection works
+- [AI calorie counter for Indian food](https://mycalai.co/ai-calorie-counter-indian-food.html): thalis, curries and mixed Indian plates
+- [AI restaurant menu scanner](https://mycalai.co/ai-menu-scanner.html): dish recommendations before you order
+- [AI nutrition coach app](https://mycalai.co/ai-nutrition-coach-app.html): coaching based on logged meal history
+- [Cal AI alternative](https://mycalai.co/cal-ai-alternative.html): comparison with other AI calorie trackers
+- [Calorie tracker without barcode scanning](https://mycalai.co/calorie-tracker-without-barcode-scanning.html): photo-first logging for home-cooked meals
+
+## Nutrition guides
+
+- [How accurate are AI calorie counters?](https://mycalai.co/how-accurate-are-ai-calorie-counters.html)
+- [Calories in chicken biryani](https://mycalai.co/calories-in-chicken-biryani.html)
+- [Calories in butter chicken](https://mycalai.co/calories-in-butter-chicken.html)
+- [Calories in chicken curry with rice](https://mycalai.co/calories-in-chicken-curry-with-rice.html)
+- [Calories in dal tadka](https://mycalai.co/calories-in-dal-tadka.html)
+- [Calories in idli sambar](https://mycalai.co/calories-in-idli-sambar.html)
+- [Calories in masala dosa](https://mycalai.co/calories-in-masala-dosa.html)
+- [Calories in samosa](https://mycalai.co/calories-in-samosa.html)
+- [How many calories in 2 rotis?](https://mycalai.co/how-many-calories-in-2-rotis.html)
+- [Is paneer butter masala healthy?](https://mycalai.co/is-paneer-butter-masala-healthy.html)
+
+## Policies
+
+- [Privacy policy](https://mycalai.co/privacy.html)
+- [Terms of service](https://mycalai.co/terms.html)
