@@ -1,0 +1,200 @@
+/* MyCal AI site theme — mirrors the Android app (ui/theme/Color.kt, Type.kt):
+   Inter throughout, Material 3 deep-violet scheme, pill buttons, tonal cards,
+   and the app's dark scheme. Loaded after each page's inline <style>, so it
+   overrides typography/colour and adds the phone layout. */
+
+:root{
+  color-scheme:light dark;
+  --paper:#FEF7FF;            /* M3Background */
+  --surface:#FFFFFF;          /* M3Surface */
+  --surface-variant:#F3EDF7;  /* M3SurfaceVariant */
+  --ink:#1D1B20;              /* M3OnSurface */
+  --ink-soft:#49454F;         /* M3OnSurfaceVariant */
+  --violet:#6750A4;           /* M3Primary */
+  --on-violet:#FFFFFF;        /* M3OnPrimary */
+  --violet-deep:#21005D;      /* M3OnPrimaryContainer */
+  --violet-container:#EADDFF; /* M3PrimaryContainer */
+  --secondary-container:#E8DEF8;
+  --line:#CAC4D0;             /* M3OutlineVariant */
+  --nav-bg:rgba(254,247,255,.86);
+  --shadow:0 1px 2px rgba(29,27,32,.08),0 2px 6px rgba(29,27,32,.06);
+  --shadow-lift:0 4px 8px rgba(29,27,32,.08),0 12px 28px -10px rgba(103,80,164,.28);
+  --font:'Inter',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --paper:#141218;
+    --surface:#1D1B20;
+    --surface-variant:#2B2930;
+    --ink:#FFFFFF;
+    --ink-soft:#E6E0E9;
+    --violet:#D0BCFF;
+    --on-violet:#381E72;
+    --violet-deep:#EADDFF;
+    --violet-container:#4F378B;
+    --secondary-container:#4A4458;
+    --line:#49454F;
+    --nav-bg:rgba(20,18,24,.86);
+    --shadow:0 1px 2px rgba(0,0,0,.4);
+    --shadow-lift:0 12px 28px -10px rgba(0,0,0,.6);
+  }
+  /* Light feature-icon tiles stay readable as tonal chips on the dark ground. */
+  .feature .ficon{filter:saturate(1.1);}
+  img[src$="logo.png"]{background:#fff;}
+}
+
+html{-webkit-text-size-adjust:100%;}
+body{font-family:var(--font);background:var(--paper);color:var(--ink);line-height:1.5;overflow-x:hidden;}
+
+/* ---------- Typography: Inter everywhere, app headline weights ---------- */
+h1,h2,h3,h4,.brand span,.step-num,.rb-val,.section-head h2,.cta-band h3{
+  font-family:var(--font) !important;font-style:normal;text-wrap:balance;
+}
+h1{font-weight:800;letter-spacing:-0.025em;line-height:1.08;}
+h1 em{font-style:normal;font-weight:800;color:var(--violet);}
+h2{font-weight:700;letter-spacing:-0.015em;line-height:1.2;}
+.section-head h2{font-weight:800;letter-spacing:-0.02em;}
+h3,h4{font-weight:700;letter-spacing:-0.005em;}
+.brand span{font-weight:800;letter-spacing:-0.02em;}
+.step-num{font-weight:800;}
+.rb-val{font-weight:800;letter-spacing:-0.01em;}
+main h2{color:var(--ink);}
+p,li{color:var(--ink-soft);}
+strong,td strong{color:var(--ink);}
+a{color:var(--violet);}
+
+/* Mono labels become M3 label styles (Inter medium, tracked). */
+.kicker,.eyebrow,.badge,.cta-note,.foot-links,footer a,th,.rb-label,.mc-label,
+.explore-links a,nav a.back,.updated,.scan-chip{
+  font-family:var(--font) !important;
+}
+.kicker,.eyebrow{font-size:12px;font-weight:700;letter-spacing:.08em;}
+.badge{font-size:11px;font-weight:700;letter-spacing:.06em;background:var(--secondary-container);color:var(--ink);}
+.cta-note,.updated{font-size:13px;font-weight:500;letter-spacing:.01em;}
+th{font-size:12px;font-weight:600;letter-spacing:.04em;}
+.foot-links,footer a{font-size:13.5px;font-weight:500;}
+nav a.back{font-size:14px;font-weight:600;}
+
+/* ---------- Top app bar ---------- */
+body > nav{
+  position:sticky;top:0;z-index:50;
+  background:var(--nav-bg);
+  -webkit-backdrop-filter:saturate(1.4) blur(14px);backdrop-filter:saturate(1.4) blur(14px);
+  border-bottom:1px solid transparent;
+}
+body > nav.wrap{max-width:none;margin:0;padding-left:max(24px,calc((100vw - 1140px)/2 + 28px));padding-right:max(24px,calc((100vw - 1140px)/2 + 28px));}
+body > nav{border-bottom-color:var(--line);}
+.brand{color:var(--ink);text-decoration:none;}
+.brand img{border-radius:10px;}
+nav a.back{display:inline-flex;align-items:center;min-height:40px;padding:0 14px;border-radius:100px;}
+nav a.back:hover{background:var(--violet-container);}
+
+/* ---------- Buttons: M3 filled / outlined, 48px touch targets ---------- */
+.btn-primary,.btn-nav,.btn-secondary{
+  font-family:var(--font) !important;border-radius:100px !important;min-height:48px;
+  justify-content:center;letter-spacing:.01em;
+}
+.btn-primary,.btn-nav{background:var(--violet);color:var(--on-violet) !important;box-shadow:var(--shadow);}
+.btn-primary{font-weight:600;padding:0 26px;}
+.btn-primary:hover{background:var(--violet);opacity:1;transform:none;box-shadow:var(--shadow-lift);filter:brightness(1.08);}
+.btn-nav{min-height:40px;padding:0 18px;}
+.btn-secondary{border:1px solid var(--line);color:var(--violet);background:transparent;padding:0 24px;}
+.btn-secondary:hover{background:var(--violet-container);border-color:var(--violet);color:var(--violet);}
+:focus-visible{outline:3px solid var(--violet);outline-offset:3px;}
+
+/* ---------- Cards: tonal surfaces with the app's 16–24dp radii ---------- */
+.feature,.card,.macro-chip,.faq-item,.step{transition:background .2s ease,box-shadow .2s ease;}
+.feature,.card,.macro-chip{background:var(--surface-variant);border:none;border-radius:20px;}
+.feature:hover{transform:none;box-shadow:var(--shadow-lift);background:var(--surface);}
+.card h4,.feature h4{color:var(--ink);}
+.feature .ficon{border-radius:14px;}
+.faq-item{background:var(--surface);border:1px solid var(--line);border-radius:16px;}
+.faq-item[open]{background:var(--surface-variant);border-color:transparent;}
+.faq-item summary{color:var(--ink);display:flex;justify-content:space-between;gap:16px;align-items:flex-start;min-height:24px;}
+.faq-item summary::after{float:none;flex-shrink:0;color:var(--violet);font-weight:600;font-size:20px;line-height:1;}
+.faq-item p{color:var(--ink-soft);}
+.photo-card,.ring-badge{background:var(--surface);}
+.ring-badge .rb-val{color:var(--ink);}
+.steps{border-top-color:var(--violet-container);}
+.step,.step:last-child{border-color:var(--line);}
+
+/* Chips (explore links) — M3 assist chips */
+.explore-links a{border-radius:10px;border:1px solid var(--line);color:var(--ink);font-size:14px;font-weight:500;padding:10px 16px;min-height:40px;display:inline-flex;align-items:center;}
+.explore-links a:hover{background:var(--violet-container);border-color:transparent;color:var(--violet-deep);}
+
+/* CTA bands */
+.cta-band{border-radius:28px;}
+.cta-band h3{font-weight:800;letter-spacing:-0.015em;}
+body > div.wrap > .cta-band{background:var(--violet);color:var(--on-violet);}
+body > div.wrap > .cta-band h3{color:var(--on-violet);}
+main .cta-band{background:var(--violet-container);}
+main .cta-band h3{color:var(--violet-deep);}
+main .cta-band .cta-note{color:var(--violet-deep);opacity:.8;}
+
+/* Tables scroll inside their own box instead of widening the page */
+table{border-collapse:separate;border-spacing:0;border:1px solid var(--line);border-radius:16px;overflow:hidden;background:var(--surface);}
+th{background:var(--surface-variant);color:var(--ink-soft);}
+th,td{border-bottom:1px solid var(--line);}
+tr:last-child td{border-bottom:none;}
+td{color:var(--ink-soft);}
+
+footer{border-top-color:var(--line) !important;}
+footer .brand span,footer > span{color:var(--ink);font-weight:800;}
+.foot-links{flex-wrap:wrap;row-gap:10px;}
+.foot-links a{color:var(--ink-soft);}
+.foot-links a:hover{color:var(--violet);}
+
+/* Section rules like `.hero{padding:44px 0}` were wiping the .wrap side gutter,
+   so content touched the screen edge below 1196px. Restore it explicitly. */
+.wrap.hero,.wrap.section,body > footer.wrap{padding-left:28px;padding-right:28px;}
+
+/* ---------- Tablet ---------- */
+@media (max-width:900px){
+  .hero{gap:56px;}
+  .visual{max-width:420px;width:100%;}
+}
+
+/* ---------- Phone ---------- */
+@media (max-width:600px){
+  .wrap,.wrap.hero,.wrap.section,body > footer.wrap{padding-left:16px;padding-right:16px;}
+  body > nav.wrap,body > nav{padding:10px 16px;}
+  nav .badge{display:none;}
+  .brand img{width:30px;height:30px;}
+  .brand span{font-size:18px;}
+  .btn-nav{margin-left:auto;}
+
+  .hero{padding:20px 0 64px;gap:48px;}
+  h1{font-size:clamp(32px,9vw,40px);}
+  .sub,.lede{font-size:16px;}
+  .cta-row{flex-direction:column;align-items:stretch;gap:12px;}
+  .cta-row .btn-primary,.cta-row .btn-secondary{width:100%;}
+  .photo-card{transform:none;border-radius:20px;}
+  .ring-badge{left:12px;bottom:-24px;transform:none;padding:10px 14px;gap:10px;}
+  .ring-badge svg{width:44px;height:44px;}
+  .scan-chip{right:12px;top:-14px;}
+
+  .section{padding:44px 0;}
+  .section-head{margin-bottom:28px;}
+  .features-grid{gap:12px;}
+  .feature{padding:20px;}
+  .macro-strip{margin-top:28px;gap:10px;}
+  .macro-chip{min-width:0;flex:1 1 100%;}
+
+  .cta-band{padding:28px 20px !important;margin:16px 0 48px;border-radius:24px;}
+  .cta-band .btn-primary{width:100%;}
+
+  main{padding-top:28px;}
+  main h2{font-size:21px;margin-top:34px;}
+  p,li{font-size:15.5px;}
+  table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch;font-size:14px;}
+  th,td{padding:10px;white-space:normal;min-width:96px;}
+  .grid2{gap:10px;}
+
+  footer,footer.wrap{flex-direction:column;align-items:flex-start;gap:14px;padding:24px 16px 32px;}
+  .foot-links{gap:10px 18px;}
+  .explore-links{gap:8px;}
+}
+
+@media (prefers-reduced-motion:reduce){
+  .scan-chip,.eyebrow::before,.scan-chip .dot{animation:none !important;}
+}
