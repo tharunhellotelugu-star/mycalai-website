@@ -3,6 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#FEF7FF" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#141218" media="(prefers-color-scheme: dark)">
+
 <title>Privacy Policy — MyCal AI</title>
 <meta name="description" content="How MyCal AI collects, uses, and protects your data, including food photos, health data, and account information.">
 <link rel="canonical" href="https://mycalai.co/privacy.html">
@@ -10,7 +13,7 @@
 <meta name="author" content="Tharun Tech Solutions">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700;9..144,900&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
   :root{
@@ -48,10 +51,11 @@
   footer a{font-family:'IBM Plex Mono',monospace;font-size:12.5px;text-decoration:none;color:var(--ink-soft);}
   footer .foot-links{display:flex;gap:18px;align-items:center;}
 </style>
+<link rel="stylesheet" href="/site.css?v=2">
 </head>
 <body>
 <nav class="wrap">
-  <a class="brand" href="/"><span>MyCal AI</span></a>
+  <a class="brand" href="/"><img src="/logo.png" alt="" width="30" height="30"><span>MyCal AI</span></a>
   <a class="back" href="/">&larr; Back to home</a>
 </nav>
 <main class="wrap">
@@ -95,10 +99,12 @@
   <li><strong>Supabase</strong> — hosts our backend database and authentication.</li>
   <li><strong>Google Play Billing &amp; RevenueCat</strong> — process subscription purchases and manage entitlement status.</li>
   <li><strong>Firebase Crashlytics</strong> — collects crash and diagnostic reports.</li>
+  <li><strong>Firebase Cloud Messaging</strong> — delivers meal reminders and other notifications you have turned on, using a device notification token.</li>
   <li><strong>Google AdMob</strong> — serves optional rewarded ads that unlock bonus scans.</li>
   <li><strong>Health Connect</strong> — only if you explicitly grant permission, to read or write specific health data types on your device.</li>
 </ul>
 <p>These providers are only permitted to use your data to provide services to us, not for their own independent purposes.</p>
+<p>This website (mycalai.co) uses <strong>Cloudflare Web Analytics</strong> to count page views. It sets no cookies, does not use fingerprinting, and does not track you across other sites.</p>
 
 <h2>Data Retention and Deletion</h2>
 <p>We retain your account and meal data for as long as your account is active, so your food diary and history remain available to you. You can request deletion of your account and associated data at any time by emailing <a href="mailto:support@mycalai.co">support@mycalai.co</a>. We will delete or anonymize your data within a reasonable time, except where retention is required by law.</p>
